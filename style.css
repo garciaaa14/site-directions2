@@ -1,0 +1,81 @@
+:root {
+    --dark-green: #1b3d2f;
+    --white: #ffffff;
+    --light-gray: #f8f9fa;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--white);
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+.bg-dark-green {
+    background-color: var(--dark-green) !important;
+}
+
+.text-dark-green {
+    color: var(--dark-green) !important;
+}
+
+a {
+    color: var(--dark-green);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* LOGO */
+.logo {
+    height: 65px;
+    width: auto; /* Mantém a proporção original */
+    object-fit: contain;
+    margin-right: 10px;
+    border-radius: 40%;
+}
+
+.logo:hover {
+    transform: scale(1.08);
+}
+/*.spacer-top {
+    margin-top: 30px;
+}
+*/
+
+
+/* ANIMAÇÕES */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-in-out;
+}
+
+.fade-in.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animated-logo {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.animated-logo.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-text {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.fade-text.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
