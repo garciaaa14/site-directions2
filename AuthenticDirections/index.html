@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Authentic Directions</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon-16x16.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body class="bg-dark-green">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-white navbar-dark text-dark-green">
+    <div class="container">
+        <a class="navbar-brand text-dark-green" href="index.html">
+            <img src="images/authenticdirectionslogo.jpeg" alt="Logo" class="logo" />
+            Authentic Directions
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link text-dark-green" href="quemsomos.html">Quem Somos</a></li>
+                <li class="nav-item"><a class="nav-link text-dark-green" href="servicos.html">Serviços</a></li>
+                <li class="nav-item"><a class="nav-link text-dark-green" href="localizacao.html">Localização</a></li>
+                <li class="nav-item"><a class="nav-link text-dark-green" href="contactos.html">Contactos</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="hero-section text-white text-center bg-dark-green">
+    <div class="container py-5 animate-fade-in">
+        <h1 class="display-4">Experiências culturais únicas no Alentejo</h1>
+        <p class="lead">Descubra tradições, sabores e paisagens autênticas com a Authentic Directions.</p>
+    </div>
+</header>
+
+<!-- Destaques -->
+<section class="container animate-slide-up bg-dark-green" style="margin-top: 0px; padding-top: 0px; margin-bottom: 140px;">
+
+    <div class="row text-center">
+        <div class="col-md-4 mb-4">
+            <img src="images/portalegre-rancho-folclorico-de-fortios.jpg" alt="Tradições Locais"
+                 class="img-fluid mb-3 shadow rounded"
+                 style="width: 100%; height: 200px; object-fit: cover;">
+            <h3 class="text-white">Tradições Locais</h3>
+            <p class="text-white">Roteiros e visitas que celebram o património e as histórias do coração do Alto Alentejo.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+            <img src="images/portalegre.jpg" alt="Aventuras Culturais"
+                 class="img-fluid mb-3 shadow rounded"
+                 style="width: 100%; height: 200px; object-fit: cover;">
+            <h3 class="text-white">Aprendizagem</h3>
+            <p class="text-white">Os visitantes poderão ter contacto direto com diversos costumes e produtos típicos de Portalegre.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+            <img src="images/1-8.jpg" alt="Guias Locais"
+                 class="img-fluid mb-3 shadow rounded"
+                 style="width: 100%; height: 200px; object-fit: cover;">
+            <h3 class="text-white">Guias Locais</h3>
+            <p class="text-white">Acompanhamento personalizado por guias que se preocupam com o bem-estar dos visitantes.</p>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Rodapé -->
+<footer class="bg-white text-dark-green text-center py-3">
+    <p>&copy; 2025 Authentic Directions - Todos os direitos reservados.</p>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Animações com JavaScript (ajustada para reduzir espaço visual)
+    document.addEventListener("DOMContentLoaded", () => {
+        const fadeElements = document.querySelectorAll('.animate-fade-in');
+        const slideElements = document.querySelectorAll('.animate-slide-up');
+
+        // Fade simples
+        fadeElements.forEach(el => {
+            el.style.opacity = 0;
+            el.style.transition = "opacity 1.5s ease-in-out";
+            setTimeout(() => el.style.opacity = 1, 300);
+        });
+
+        // Slide leve (menos deslocamento vertical)
+        slideElements.forEach(el => {
+            el.style.opacity = 0;
+            el.style.transform = "translateY(10px)"; // antes era 30px
+            el.style.transition = "all 1s ease-in-out";
+            setTimeout(() => {
+                el.style.opacity = 1;
+                el.style.transform = "translateY(0)";
+            }, 600);
+        });
+    });
+</script>
+
+</body>
+</html>
