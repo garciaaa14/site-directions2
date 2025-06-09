@@ -7,7 +7,11 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/x-icon" href="/images/favicon-16x16.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
+
 <body class="bg-dark-green">
 
 <!-- Navbar -->
@@ -31,49 +35,109 @@
     </div>
 </nav>
 
-<!-- Conteúdo -->
+<!-- Cabeçalho -->
 <header class="bg-dark-green text-white text-center py-5 fade-in spacer-top"
         style="border-bottom: 2px solid white;">
     <h1 class="fw-bold">Quem Somos</h1>
 </header>
 
-
+<!-- Conteúdo da Página -->
 <section class="container my-5 fade-in bg-dark-green text-white">
     <div class="row align-items-center">
-        <!-- Texto à esquerda -->
-        <div class="col-md-6">
-            <p class="fs-5">
-                A Autentic Directions é uma empresa de animação turística que oferece quatro rotas culturais por diversas localidades no distrito de Portalegre.
-            </p>
-            <p class="fs-5">
-                Queremos que cada visitante leve consigo não apenas memórias, mas também uma nova ligação com esta terra rica em história e identidade.
-            </p>
-            <h5 class="fw-bold"style="margin-top: 50px">
-                CARLOTA ESTRABOCHA
-            </h5>
-            <p class="fs-5">
-                A Carlota é uma pessoa determinada, comunicativa e com fácil adaptação aos novos desafios que surgem. Procura aprofundar mais os seus conhecimentos, fala fluentemente português (nativo) e inglês e um pouco de espanhol. Tem interesse pela cultura dos locais que visita e em que reside.
-            </p>
-            <h5 class="fw-bold"style="margin-top: 50px">
-                LEONOR GANDUM
-            </h5>
-            <p class="fs-5">
-                A Leonor é uma pessoa focada nos seus objetivos, comunicativa, criativa e sempre pronta para se adaptar a novos desafios. Procura que todos os clientes estejam satisfeitos e arranja sempre solução para os problemas. É alegre, presente e educada e fala fluentemente português (nativo) e espanhol e um pouco de inglês.
-            </p>
+
+        <section class="container my-5 fade-in bg-dark-green text-white text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <p class="texto-descricao">
+                        A Autentic Directions é uma empresa de animação turística que oferece quatro rotas culturais por diversas localidades no distrito de Portalegre.
+                    </p>
+
+                    <h3 class="equipa-descricao">Principal Objetivo</h3>
+                    <p class="texto-descricao">
+                        O nosso principal objetivo é oferecer atividades de animação turística, que enaltecem as tradições, os costumes e a autenticidade local. Temos também o objetivo de atrair mais turistas para a região ao oferecer atividades inexistentes na mesma.
+                    </p>
+
+                    <h3 class="equipa-descricao">Missão</h3>
+                    <p class="texto-descricao">
+                        Empresa dedicada a proporcionar aos visitantes uma experiência genuína e imersiva na região de Portalegre. Queremos que os nossos clientes não sejam apenas turistas, mas sim pessoas que se conectam com a essência cultural e natural do distrito.
+                    </p>
+
+                    <h2 class="equipa-titulo mt-5">A NOSSA EQUIPA</h2>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Carlota -->
+        <div class="col-md-4 mb-4">
+            <div class="card-equipa fade-in bg-dark-green text-white">
+                <a href="carlota.html">
+                    <img src="images/1-nobg.png" alt="Carlota" class="img-fluid perfil-img" />
+                </a>
+                <div class="equipa-info">
+                    <p class="nome-completo">Carlota Estrabocha</p>
+                    <p class="nickname">CARLOTA</p>
+                </div>
+            </div>
         </div>
 
-        <!-- Imagem à direita -->
-        <div class="col-md-6 text-center">
-            <img src="images/migas.jpg" class="img-fluid rounded" style="max-height: 500px; object-fit: cover;">
+        <!-- Leonor -->
+        <div class="col-md-4 mb-4">
+            <div class="card-equipa fade-in bg-dark-green text-white">
+                <a href="leonor.html">
+                    <img src="images/2-nobg.png" alt="Leonor" class="img-fluid perfil-img" />
+                </a>
+                <div class="equipa-info">
+                    <p class="nome-completo">Leonor Gandum</p>
+                    <p class="nickname">LEONOR</p>
+                </div>
+            </div>
         </div>
+
+        <!-- Inês -->
+        <div class="col-md-4 mb-4">
+            <div class="card-equipa fade-in bg-dark-green text-white">
+                <a href="ines.html">
+                    <img src="images/1-nobg.png" alt="Inês" class="img-fluid perfil-img" />
+                </a>
+                <div class="equipa-info">
+                    <p class="nome-completo">Inês Oliveira</p>
+                    <p class="nickname">INÊS</p>
+                </div>
+            </div>
+        </div>
+
     </div>
 </section>
 
-
+<!-- Footer -->
 <footer class="bg-white text-dark-green text-center py-3 fade-in">
     <p>&copy; 2025 Authentic Directions - Todos os direitos reservados.</p>
 </footer>
 
-<script src="script.js"></script>
+<!-- JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const fadeElements = document.querySelectorAll(".fade-in");
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("appear");
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        fadeElements.forEach(el => {
+            observer.observe(el);
+        });
+    });
+</script>
+
 </body>
 </html>
